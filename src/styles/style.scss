@@ -1,0 +1,13 @@
+body {
+  min-height: 100vh;
+  background-image: url(../assets/images/background.webp);
+  background-size: cover;
+  background-position: center;
+  font-family: var(--font-family), sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  padding-inline: 24px;
+  margin: 0 auto;
+}

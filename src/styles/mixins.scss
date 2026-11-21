@@ -1,0 +1,88 @@
+@use "variables" as *;
+
+@mixin base-typography(
+  $font-family,
+  $font-size,
+  $font-weight,
+  $line-height,
+) {
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  line-height: $line-height;
+}
+
+@mixin center {
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin header-h1 {
+  @include base-typography(
+  var(--font-family),
+  var(--h1-font-size),
+  var(--h1-font-weight),
+  var(--h1-line-height),
+  )};
+
+@mixin header-button {
+  @include base-typography(
+  var(--font-family),
+  var(--header-button-font-size),
+  var(--header-button-font-weight),
+  var(--header-button-line-height),
+  )};
+
+@mixin stats-label {
+  @include base-typography(
+  var(--font-family),
+  var(--stats-label-font-size),
+  var(--stats-label-font-weight),
+  var(--stats-label-line-height),
+  )
+}
+
+@mixin stats-value {
+  @include base-typography(
+    var(--font-family),
+    var(--stats-value-font-size),
+    var(--stats-value-font-weight),
+    var(--stats-value-line-height),
+  )
+}
+
+@mixin victory__header-title {
+  @include base-typography(
+  var(--font-family),
+  var(--victory__header-title-font-size),
+  var(--victory__header-title-font-weight),
+  var(--victory__header-title-line-height),
+  )
+}
+
+@mixin victory__header-win {
+  @include base-typography(
+    var(--font-family),
+    var(--victory__header-win-font-size),
+    var(--victory__header-win-font-weight),
+    var(--victory__header-win-line-height),
+  )
+}
+
+@mixin victory__header-description {
+  @include base-typography(
+    var(--font-family),
+    var(--victory__header-description-font-size),
+    var(--victory__header-description-font-weight),
+    var(--victory__header-description-line-height),
+  )
+}
+
+@mixin track-select {
+  @include base-typography(
+  var(--font-family),
+  var(--track-select-font-size),
+  var(--track-select-font-weight),
+  var(--track-select-line-height),
+  )
+}

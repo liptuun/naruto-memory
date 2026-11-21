@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./src/styles/main.scss" />
+    <link rel="icon" type="image/svg+xml" href="/naruto.svg" />
+    <title>Memory</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__container container">
+        <div class="header__start">
+          <a
+            class="header__logo"
+            href="/"
+          >
+            <img
+              class="header__logo-image"
+              src="./src/assets/icons/logo.svg"
+              alt="Game Logo"
+              width="48"
+              height="38"
+              loading="lazy"
+            />
+          </a>
+          <h1 class="header__title">Memory <span class="header__title-accent">Game</span></h1>
+        </div>
+        <div class="header__actions">
+          <button
+            class="header__button--refresh"
+            type="button"
+          >
+            <img
+              class="header__button button-refresh-image"
+              src="./src/assets/icons/refresh.svg"
+              alt=""
+              width="24"
+              height="24"
+              loading="lazy"
+            />
+            New game
+          </button>
+          <button
+            class="header__button--volume"
+            type="button"
+          >
+            <img
+              class="header__button button-volume-image"
+              src="./src/assets/icons/equalizer.svg"
+              alt="Volume"
+              width="35"
+              height="25"
+              loading="lazy"
+            />
+          </button>
+          <div class="header__track-select">
+            <select
+              name="header__track-select"
+              class="header__track-select-control"
+              data-js-track-select
+            >
+              <option value="0">Blue Bird</option>
+              <option value="1">Hero</option>
+              <option value="2">Sadness into Kindness</option>
+            </select>
+          </div>
+          <div class="header__volume-control">
+            <label
+              class="header__volume-label"
+              for="music-volume"
+            >
+              Volume
+            </label>
+
+            <input
+              class="header__volume-slider"
+              id="music-volume"
+              data-js-music-volume
+              type="range"
+              min="0"
+              max="100"
+              step="1"
+              value="40"
+            />
+            <output
+              class="header__volume-value"
+              data-js-music-volume-value
+              for="music-volume"
+            >
+              40%
+            </output>
+          </div>
+        </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <div class="main__container container">
+        <section class="stats">
+          <ul class="stats__list">
+            <li class="stats__item">
+              <img
+                class="stats__icon"
+                src="./src/assets/icons/gamepad.svg"
+                alt=""
+                width="32"
+                height="32"
+                loading="lazy"
+              />
+              <span class="stats__label">Moves</span>
+              <span class="stats__value" data-js-moves>0</span>
+            </li>
+            <li class="stats__item">
+              <img
+                class="stats__icon"
+                src="./src/assets/icons/shuriken.svg"
+                alt=""
+                width="32"
+                height="32"
+                loading="lazy"
+              />
+              <span class="stats__label">Pairs</span>
+              <span class="stats__value" data-js-pairs>0 / 8</span>
+            </li>
+          </ul>
+        </section>
+        <section class="cards">
+          <ul class="cards__list"></ul>
+        </section>
+        <section class="victory" hidden>
+          <div class="victory__window">
+            <button
+              class="victory__button--close"
+              type="button"
+            >
+              <img
+                class="button--close-img"
+                src="./src/assets/icons/close.svg"
+                alt=""
+                width="25"
+                height="25"
+                loading="lazy"
+              />
+            </button>
+            <div class="victory__header">
+              <img
+                class="victory__image"
+                src="./src/assets/icons/cup.svg"
+                alt=""
+                width="32"
+                height="32"
+                loading="lazy"
+              />
+              <h2 class="victory__header-title">Congratulations!</h2>
+              <p class="victory__header-win">You win!</p>
+
+              <p class="victory__header-description">
+                You've found all
+                <span data-js-victory-pairs>8</span>
+                pairs in
+                <span data-js-victory-moves>X</span>
+                moves
+              </p>
+            </div>
+            <button
+              class="victory__button--refresh"
+              type="button"
+            >
+              New Game
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <section class="footer__clue">
+          <img
+            class="footer__icon"
+            src="./src/assets/icons/info.svg"
+            alt=""
+            width="32"
+            height="32"
+            loading="lazy"
+          />
+          <p class="footer__description">Find all pairs of cards</p>
+        </section>
+      </div>
+    </footer>
+    <section class="welcome" >
+      <div class="welcome__window">
+        <div class="welcome__content">
+          <p class="welcome__eyebrow">NARUTO MEMORY</p>
+          <h2 class="welcome__title" id="welcome-title">Made by @liptuun</h2>
+          <p class="welcome__description" id="welcome-description">
+            Find all
+            <span data-js-welcome-pairs>X</span>
+            pairs of characters.
+            By clicking on the equalizer, the music will play. It will make immersion in the game even better!
+          </p>
+        </div>
+        <button
+          class="welcome__button--play"
+          type="button"
+        >
+          PLAY
+        </button>
+      </div>
+    </section>
+    <script src="src/scripts/main.js" type="module"></script>
+  </body>
+</html>

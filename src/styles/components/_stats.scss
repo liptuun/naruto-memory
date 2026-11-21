@@ -1,0 +1,63 @@
+@use "../mixins.scss";
+
+.stats {
+  display: grid;
+
+  margin-inline: auto;
+  margin-top: 20px;
+  max-width: 530px;
+  min-height: 100px;
+
+  background: var(--stats-background);
+  border: var(--stats-border);
+  border-radius: var(--stats-border-radius);
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    @include mixins.center;
+    row-gap: 5px;
+
+    &::before,
+    &:last-child::after {
+      content: '';
+      position: absolute;
+      top: 20px;
+      bottom: 20px;
+      width: 1px;
+      background: linear-gradient(
+        to bottom,
+        transparent,
+        #8a45e3 14%,
+        #8a45e3 88%,
+        transparent
+      );
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &:last-child::after {
+      right: 0;
+    }
+  }
+
+  &__label {
+    color: var(--secondary-color);
+    @include mixins.stats-label;
+  }
+
+  &__value {
+    color: var(--main-color);
+    @include mixins.stats-value;
+    letter-spacing: 0.3px;
+  }
+}

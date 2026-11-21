@@ -1,0 +1,13 @@
+@use "normalize.css";
+@use "fonts.scss";
+@use "style.scss";
+@use "variables.scss";
+@use "mixins.scss";
+
+
+@use "./components/_header.scss";
+@use "./components/_stats.scss";
+@use "./components/_cards.scss";
+@use "./components/_footer.scss";
+@use "./components/_victory.scss";
+@use "./components/_welcome.scss";

@@ -1,0 +1,27 @@
+@use "../mixins.scss";
+
+.footer {
+  margin-top: 30px;
+
+  &__container {
+    display: flex;
+    @include mixins.center;
+  }
+
+  &__clue {
+    display: inline-flex;
+    @include mixins.center;
+    column-gap: 10px;
+    padding-inline: 20px;
+
+    min-height: 53px;
+
+    background: var(--stats-background);
+    border: var(--stats-border);
+    border-radius: var(--stats-border-radius);
+  }
+
+  &__description {
+    color: var(--secondary-color);
+  }
+}
