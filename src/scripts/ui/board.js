@@ -1,5 +1,4 @@
 import { characters } from "../data/characters.js";
-import {createInitialGameState} from "../game/game.js";
 
 export const createCardElement = function (card, index) {
   const cardItemElement = document.createElement('li')

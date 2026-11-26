@@ -10,7 +10,7 @@ export const createInitialGameState = function (characters) {
 }
 
 const getOpenedUnmatchedCards = function (gameState) {
-  return gameState.cards.filter((card) => card.isFlipped && !card.isMatched === true)
+  return gameState.cards.filter((card) => card.isFlipped && !card.isMatched)
 }
 
 export const tryOpenCard = function (gameState, cardIndex) {
